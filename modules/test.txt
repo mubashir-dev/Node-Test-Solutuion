@@ -1,0 +1,23 @@
+const skipForTest = false;
+
+if (
+  !skipForTest &&
+  // If total distance of the route calcuated previously is less than maxlen
+  (calculations.prevDistance < maxRouteLength)
+  // Then check if there are customers remaining
+  && calculations.customersRemaining)
+  {
+
+
+
+} else {
+
+  // Increment the number of routes assigned
+  calculations.routeNumber += 1;
+  // Push the route calculated to the all deliveryRoutes 
+  calculations.deliveryRoutes.push({ totalLength: `${(calculations.prevDistance)} meters from Store.`, route: calculations.currentRoute });
+  // Set the total distance of the route to be zero
+  calculations.prevDistance = 0;
+  // set the current route be empty
+  calculations.currentRoute = [];
+}
